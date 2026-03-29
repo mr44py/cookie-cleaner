@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('Outfit.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('Outfit-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('Outfit-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --primary: #FF3366;
+    --primary-hover: #E62E5C;
+    --secondary: #2A2D3E;
+    --secondary-hover: #3A3D5E;
+    --background: #13141C;
+    --surface: #1C1E2A;
+    --text-main: #FFFFFF;
+    --text-muted: #8E92AE;
+    --success: #00E676;
+
+    /* Global user rule requested larger text, but balanced so it fits */
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 28px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background);
+    color: var(--text-main);
+    width: 360px;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-base);
+}
+
+.container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    background: linear-gradient(90deg, #FF3366, #FF9933);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.subtitle {
+    margin: -8px 0 0 0;
+    font-size: var(--font-size-base);
+    color: var(--text-muted);
+    text-align: center;
+    font-weight: 400;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--surface);
+    border: 2px solid #2A2D3E;
+    border-radius: 12px;
+    padding: 10px;
+    color: var(--text-main);
+    font-family: monospace;
+    font-size: var(--font-size-base);
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 51, 102, 0.1);
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-family: inherit;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 14px rgba(255, 51, 102, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 6px 20px rgba(255, 51, 102, 0.6);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.btn-outline {
+    flex: 1;
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--text-main);
+    padding: 10px;
+    font-size: var(--font-size-base);
+    border-radius: 8px;
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary);
+}
+
+input[type="file"].hidden {
+    display: none;
+}
+
+.status-msg {
+    text-align: center;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.status-msg.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.status-msg.success {
+    background-color: rgba(0, 230, 118, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(0, 230, 118, 0.2);
+}

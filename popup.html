@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Sweeper</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cookie Sweeper</h1>
+        <p class="subtitle">Keep what matters, sweep the rest.</p>
+
+        <div class="input-group">
+            <label for="whitelist">Whitelisted Domains (one per line):</label>
+            <textarea id="whitelist" placeholder="e.g.&#10;google.com&#10;x.com&#10;instagram.com" rows="6"></textarea>
+
+            <div class="button-row">
+                <button type="button" id="importBtn" class="btn btn-outline">Import List</button>
+                <input type="file" id="importFile" accept=".txt" class="hidden">
+                <button type="button" id="exportBtn" class="btn btn-outline">Export List</button>
+            </div>
+        </div>
+
+        <button type="button" id="saveBtn" class="btn btn-secondary">Save Whitelist</button>
+        <button type="button" id="sweepBtn" class="btn btn-primary">Sweep Cookies Now!</button>
+
+        <div id="status" class="status-msg hidden"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
