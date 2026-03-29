@@ -17,3 +17,4 @@ You may still see site names in your browser settings with tiny amounts of data 
 
 These are empty technical records kept by the browser itself. They do not contain your login sessions or tracking information and are entirely privacy-safe.
 
+Link to extention: https://chromewebstore.google.com/detail/cookie-sweeper-whitelist/cpilfcnaabcedfmaikmlilglfklbifkp
